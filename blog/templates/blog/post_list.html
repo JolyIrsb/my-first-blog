@@ -1,33 +1,17 @@
-<!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8"> 
-<link rel="stylesheet" href="gamecriticacss2.css">
-<title>frame2</title>
-</head>
-<body>
-	<div id="Thread">
-		<h1>Топ-5 Треды</h1>
-		<hr>
-		<p><b>Bloodborne.</b>
-		Вы можете оставить свои впечатления об игре здесь:
-		</p>
-		<hr>
-		<p><b>Overwatch.</b>
-		Вы можете оставить свои впечатления об игре здесь:
-		</p>
-		<hr>
-		<p><b>The Witcher 3:Wild Hunt.</b>
-		Вы можете оставить свои впечатления об игре здесь:
-		</p>
-		<hr>
-		<p><b>Rainbow Six Siedge</b>
-		Вы можете оставить свои впечатления об игре здесь:
-		</p>
-		<hr>
-		<p><b>Battlefield 5</b>
-		Вы можете оставить свои впечатления об игре здесь:
-		</p>
-	</div>
-</body>
+    <head>
+        <title>IRSBY BLOGTESTSITE</title>
+    </head>
+    <body>
+        <div>
+            <h1><a href="/">Irsby top $$lmao$$</a></h1>
+        </div>
+{% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
+    </body>
 </html>
