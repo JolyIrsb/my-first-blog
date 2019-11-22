@@ -1,16 +1,28 @@
+{% load static %}
 <html>
     <head>
         <title>IRSBY BLOGTESTSITE</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="{% static 'style.css' %}">
     </head>
     <body>
-        <div>
-            <h1><a href="/">Irsby top $$lmao$$</a></h1>
+        <div id="title">
+            <h1><a href="/">IRSBYE BLOG</a></h1>
         </div>
 {% for post in posts %}
-    <div>
-        <p>published: {{ post.published_date }}</p>
-        <h1><a href="">{{ post.title }}</a></h1>
-        <p>{{ post.text|linebreaksbr }}</p>
+    <div id="posts">
+        <div id="pub_date">
+            <p>published: {{ post.published_date }}</p>
+        </div>
+        <div id="post_title">
+            <h1><a href="">{{ post.title }}</a></h1>
+        </div>
+        <div id="post_text">
+            <p>{{ post.text|linebreaksbr }}</p>
+        </div>
+        <hr>
     </div>
 {% endfor %}
     </body>
