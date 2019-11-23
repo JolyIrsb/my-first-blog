@@ -118,7 +118,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
-#STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-#ОДНОМ МЕШАЕТ ДРУГОМУ СУКА/ ПРОБЛЕМА В СТАТИК И СТАТИК ФАЙЛС. ИЗМЕНЕНИЯ В BASE.HTML, SETTINGS.PY/ДА ХРАНИТ ТЕБЯ БОГ, БУДУЩИЙ Я
+STATIC_ROOT = os.path.join('/HCP/DJANGO/static/')
+
+#STATICFILES_DIRS = [
+    #'/HCP/DJANGO/static/',
+#]
